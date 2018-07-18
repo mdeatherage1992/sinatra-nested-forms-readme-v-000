@@ -4,6 +4,7 @@ class App < Sinatra::Base
   get '/' do
     erb :new
   end
+
   post '/student' do
   @student = Student.new(params[:student])
 
@@ -14,5 +15,5 @@ class App < Sinatra::Base
   @courses = Course.all
 
   erb :student
-end
+  end
 end
